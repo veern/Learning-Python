@@ -1,9 +1,6 @@
 import string
-import logging
 import itertools
 import os
-
-logging.basicConfig(level=logging.DEBUG, encoding="utf-8")
 
 def check_if_palindrome(strng: str) -> bool:
     """This function return True or False, depending if given string is a palindrome or not"""
