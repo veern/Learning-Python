@@ -3,7 +3,7 @@ import itertools
 import os
 
 """
-This program checks if a string that consists of letters and question mark could be a string
+This program checks if a string that consists of letters and question mark could be a palindrome
 if question marks were swapped for certain letters. 
 For strings with no question marks, it just checks if a string is a palindrome.
 """
