@@ -1,10 +1,9 @@
 from PhoneBook import PhoneBook, Contact
 import requests
-import json
 import html
 
 ENDPOINT = 'https://randomuser.me/api/'
-AMOUNT_TO_GENERATE = 10
+AMOUNT_TO_GENERATE = 3
 
 def call_request(url, params=[]):
     r = requests.get(url)
@@ -26,15 +25,15 @@ def generate_sample_PhoneBook(amount: int) -> PhoneBook:
     return Book
 
 def main():
-    Book = generate_sample_PhoneBook(AMOUNT_TO_GENERATE)
-    Book.save(r"C:\Users\Krystian-Laptop\Desktop\Python\Moje\Katas\PhoneBook\Phonebook.txt")
-    # Book = PhoneBook()
-    # Book.load(r"C:\Users\Krystian-Laptop\Desktop\Python\Moje\Katas\PhoneBook\Phonebook.txt")
-    # Dave = Contact("Dave", "Tribiani", 123456789)
-    # Shane = Contact("Shane", "Dawson", 239238123)
-    # Book.add_contact(Dave, Shane)
-    # Book.del_contact("Dave", "Tribiani")
-    # Book.refresh_numeration_of_contacts()
+    # Book = generate_sample_PhoneBook(AMOUNT_TO_GENERATE)
+    # Book.save(r"C:\Users\Krystian-Laptop\Desktop\Python\Moje\Katas\PhoneBook\Phonebook.txt")
+    Book = PhoneBook()
+    Book.load(r"C:\Users\Krystian-Laptop\Desktop\Python\Moje\Katas\PhoneBook\Phonebook.txt")
+    Shane = Contact("Shane", "Dawson", 239238123)
+    Dave = Contact("Dave", "Tribiani", 123456789)
+    Book.add_contact(Dave, Shane)
+    Book.del_contact("Dave", "Tribiani")
+    print(Book.contacts)
     # print(Book)
 
 if __name__ == "__main__":

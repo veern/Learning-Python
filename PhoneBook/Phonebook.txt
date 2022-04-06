@@ -1,52 +1,17 @@
-{
-    "0": {
-        "Name": "Marina",
-        "Lastname": "Cabrera",
-        "Phone number": "935-328-789"
+[
+    {
+        "Name": "Brynjar",
+        "Lastname": "S\u00e6terdal",
+        "Phone number": "20031729"
     },
-    "1": {
-        "Name": "Arthur",
-        "Lastname": "Macdonald",
-        "Phone number": "116-945-0692"
+    {
+        "Name": "Oliver",
+        "Lastname": "Pelletier",
+        "Phone number": "885-205-0890"
     },
-    "2": {
-        "Name": "Russel",
-        "Lastname": "Moreira",
-        "Phone number": "(09) 6810-7325"
-    },
-    "3": {
-        "Name": "Vicente",
-        "Lastname": "Soler",
-        "Phone number": "989-908-362"
-    },
-    "4": {
-        "Name": "Eve",
-        "Lastname": "Dubois",
-        "Phone number": "02-84-39-51-59"
-    },
-    "5": {
-        "Name": "Ester",
-        "Lastname": "Sch\u00f6nfelder",
-        "Phone number": "0233-0404185"
-    },
-    "6": {
-        "Name": "Leonie",
-        "Lastname": "Thamm",
-        "Phone number": "0643-5013200"
-    },
-    "7": {
-        "Name": "Florus",
-        "Lastname": "Naber",
-        "Phone number": "(426)-933-8727"
-    },
-    "8": {
-        "Name": "Dina",
-        "Lastname": "L\u00f8voll",
-        "Phone number": "50928592"
-    },
-    "9": {
-        "Name": "Edward",
-        "Lastname": "Wilson",
-        "Phone number": "(277)-959-0367"
+    {
+        "Name": "Kirk",
+        "Lastname": "Clarke",
+        "Phone number": "017687 05846"
     }
-}
+]

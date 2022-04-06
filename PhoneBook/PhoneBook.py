@@ -2,7 +2,7 @@ from Contact import Contact
 import json
 
 class PhoneBook:
-    contacts = {}
+    contacts = []
     
     @property
     def size(self):
@@ -18,33 +18,25 @@ class PhoneBook:
         with open(destination, "w") as f:
             f.write(json.dumps(self.contacts, indent=4))
 
-    def add_contact(self, *contact: Contact) -> None:
+    def add_contact(self, *people_to_add: Contact) -> None:
         """Add a contact to a phone book"""
-        for person in contact:
-            self.contacts[self.size] = {
+        for person in people_to_add:
+            personal_information = {
                 "Name": person.name,
                 "Lastname": person.lastname,
                 "Phone number": person.phone_number
                 }
+            self.contacts.append(personal_information)
 
     def del_contact(self, name: str, lastname: str) -> None:
         """Delete a contact from a phone book"""
-        for i, person in self.contacts.items():
+        for i, person in enumerate(self.contacts):
             if (person['Name'], person['Lastname']) == (name, lastname):
                 self.contacts.pop(i)
                 print(f"\n{name} {lastname} deleted.\n")
                 break
         else:
             print(f"\nNo {name} {lastname} found in the Phone book.\n")
-
-    def refresh_numeration_of_contacts(self) -> None:
-        i = 0
-        for number, person in self.contacts.items():
-            if number != str(i):
-                tmp = Contact(person['Name'], person['Lastname'], person['Phone number'])
-                self.contacts.pop(number)
-                self.contacts[str(i)] = tmp
-            i += 1
 
     def __len__(self) -> int:
         return self.size
