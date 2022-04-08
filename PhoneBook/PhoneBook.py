@@ -22,8 +22,8 @@ class PhoneBook:
         """Add a contact to a phone book"""
         for person in people_to_add:
             personal_information = {
-                "Name": person.name,
-                "Lastname": person.lastname,
+                "Name": person.name.capitalize(),
+                "Lastname": person.lastname.capitalize(),
                 "Phone number": person.phone_number
                 }
             self.contacts.append(personal_information)
@@ -31,9 +31,9 @@ class PhoneBook:
     def del_contact(self, name: str, lastname: str) -> None:
         """Delete a contact from a phone book"""
         for i, person in enumerate(self.contacts):
-            if (person['Name'], person['Lastname']) == (name, lastname):
+            if (person['Name'], person['Lastname']) == (name.capitalize(), lastname.capitalize()):
                 self.contacts.pop(i)
-                print(f"\n{name} {lastname} deleted.\n")
+                print(f"\n{name.capitalize()} {lastname.capitalize()} deleted.\n")
                 break
         else:
             print(f"\nNo {name} {lastname} found in the Phone book.\n")
@@ -43,10 +43,10 @@ class PhoneBook:
 
     def __str__(self) -> str:
         strng = ""
-        for number, contact in self.contacts.items():
-            strng = f"{strng}\n{number}.\t"
+        for contact in self.contacts:
             for key, value in contact.items():
-                strng = f"{strng}{key}: {value}\t\t\t"
+                strng = f"{strng}{key}: {value}\t\t"
+            strng = f"{strng}\n"
         return strng
 
     def __repr__(self) -> str:
