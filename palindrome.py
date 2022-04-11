@@ -42,7 +42,7 @@ def replace_question_marks(strng: str) -> list[str]:
 def main():
     os.system("cls")
     #For more than 4 '?' characters, prepare for long computation time.
-    examples = ["???", "a?a", "kayak", "dojo", "bambi", "?trer??", "?s?dA?dAsd?"]
+    examples = ["???", "a?a", "kayak", "dojo", "bambi", "?trer??", "?s?dA?dAsd"]
     for example in examples:
         print(f"{example}:\t{len(replace_question_marks(example))}")
 
