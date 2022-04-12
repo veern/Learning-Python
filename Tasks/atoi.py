@@ -23,6 +23,3 @@ def myAtoi(s: str) -> int:
         elif result > 2**31-1:
             result = 2**31-1
         return result
-        
-
-print(myAtoi("+1"),)
