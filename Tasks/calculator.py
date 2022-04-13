@@ -1,6 +1,7 @@
 class Calculator:
 
-    signs = ["+", "-", "*", "/", "^"]
+    def __init__(self) -> None:
+        self.signs = ["+", "-", "*", "/", "^"]
 
     def add(num1: int | float, num2: int | float) -> int | float:
         return num1 + num2
@@ -36,4 +37,4 @@ class Calculator:
         return operators[operator]
 
 calc = Calculator()
-print(calc.evaluate("92^2"))
+print(calc.evaluate("938-928"))
