@@ -1,42 +1,36 @@
-class Calculator:
 
-    def __init__(self) -> None:
-        self.signs = ["+", "-", "*", "/", "^"]
+def add(num1: int | float, num2: int | float) -> int | float:
+    return num1 + num2
 
-    @staticmethod
-    def add(num1: int | float, num2: int | float) -> int | float:
-        return num1 + num2
-    
-    @staticmethod
-    def subtraction(num1: int | float, num2: int | float) -> int | float:
-        return num1 - num2
+def subtraction(num1: int | float, num2: int | float) -> int | float:
+    return num1 - num2
 
-    @staticmethod
-    def multiplication(num1: int | float, num2: int | float) -> int | float:
-        return num1*num2
+def multiplication(num1: int | float, num2: int | float) -> int | float:
+    return num1*num2
 
-    @staticmethod
-    def division(num1: int | float, num2: int | float) -> float:
-        return num1/num2
+def division(num1: int | float, num2: int | float) -> float:
+    return num1/num2
 
-    @staticmethod
-    def raise_to_power(num1: int | float, power: int | float) -> int | float:
-        return num1**power
+def raise_to_power(num1: int | float, power: int | float) -> int | float:
+    return num1**power
 
-    def evaluate(self, strng: str) -> int | float:
+def evaluate(strng: str) -> int | float:
+    signs = ["+", "-", "*", "/", "^"]
 
-        for character in strng:
-            if character in self.signs:
-                operator = character
+    for character in strng:
+        if character in signs:
+            operator = character
 
-        num1, num2 = map(int, strng.split(operator))
+    num1, num2 = map(int, strng.split(operator))
 
-        operators = {
-            "+": Calculator.add(num1, num2),
-            "-": Calculator.subtraction(num1, num2),
-            "*": Calculator.multiplication(num1, num2),
-            "/": Calculator.division(num1, num2),
-            "^": Calculator.raise_to_power(num1, num2),
-        }
+    operators = {
+        "+": add(num1, num2),
+        "-": subtraction(num1, num2),
+        "*": multiplication(num1, num2),
+        "/": division(num1, num2),
+        "^": raise_to_power(num1, num2),
+    }
 
-        return operators[operator]
+    return operators[operator]
+
+print(evaluate("643+523"))
