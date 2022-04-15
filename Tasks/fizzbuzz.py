@@ -15,5 +15,3 @@ def fizzbuzz_v2(start: int, end: int) -> None:
         result = "Fizz" if number % 3 == 0 else result
         result = f"{result}Buzz" if number % 5 == 0 else result
         print(number if result == '' else result)
-
-fizzbuzz_v2(1,15)
