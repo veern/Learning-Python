@@ -1,4 +1,3 @@
-
 def add(num1: int | float, num2: int | float) -> int | float:
     return num1 + num2
 
@@ -32,5 +31,3 @@ def evaluate(strng: str) -> int | float:
     }
 
     return operators[operator]
-
-print(evaluate("643+523"))
